@@ -1,0 +1,145 @@
+flagCode,country,WorldHappinessScore_2025,WorldHappinessRank_2025
+FI,Finland,7.74,1
+DK,Denmark,7.52,2
+IS,Iceland,7.52,3
+SE,Sweden,7.35,4
+NL,Netherlands,7.31,5
+CR,Costa Rica,7.27,6
+NO,Norway,7.26,7
+IL,Israel,7.23,8
+LU,Luxembourg,7.12,9
+MX,Mexico,6.98,10
+AU,Australia,6.97,11
+NZ,New Zealand,6.95,12
+CH,Switzerland,6.94,13
+BE,Belgium,6.91,14
+IE,Ireland,6.89,15
+LT,Lithuania,6.83,16
+AT,Austria,6.81,17
+CA,Canada,6.8,18
+SI,Slovenia,6.79,19
+CZ,Czechia,6.78,20
+AE,United Arab Emirates,6.76,21
+DE,Germany,6.75,22
+GB,United Kingdom,6.73,23
+US,United States,6.72,24
+BZ,Belize,6.71,25
+TW,Taiwan,6.67,27
+KW,Kuwait,6.63,30
+RS,Serbia,6.61,31
+SA,Saudi Arabia,6.6,32
+FR,France,6.59,33
+SG,Singapore,6.57,34
+RO,Romania,6.56,35
+BR,Brazil,6.49,36
+SV,El Salvador,6.49,37
+ES,Spain,6.47,38
+IT,Italy,6.42,40
+EE,Estonia,6.42,39
+PA,Panama,6.41,41
+AR,Argentina,6.4,42
+KZ,Kazakhstan,6.38,43
+PL,Poland,6.37,26
+CL,Chile,6.36,45
+GT,Guatemala,6.36,44
+VN,Vietnam,6.35,46
+NI,Nicaragua,6.33,47
+MT,Malta,6.32,48
+TH,Thailand,6.22,49
+SK,Slovakia,6.22,50
+LV,Latvia,6.21,51
+OM,Oman,6.2,52
+UZ,Uzbekistan,6.19,53
+PY,Paraguay,6.17,54
+JP,Japan,6.15,55
+BA,Bosnia and Herzegovina,6.14,56
+PH,Philippines,6.11,57
+KR,South Korea,6.04,58
+BH,Bahrain,6.03,59
+PT,Portugal,6.01,60
+CO,Colombia,6,61
+EC,Ecuador,5.97,62
+MY,Malaysia,5.96,64
+HN,Honduras,5.96,63
+RU,Russia,5.95,66
+PE,Peru,5.95,65
+CY,Cyprus,5.94,67
+CN,China,5.92,68
+HU,Hungary,5.92,69
+TN,Tunisia,5.91,70
+ME,Montenegro,5.88,71
+BO,Bolivia,5.87,74
+HR,Croatia,5.87,72
+JM,Jamaica,5.87,73
+KG,Kyrgyzstan,5.86,75
+DO,Dominican Republic,5.85,76
+MN,Mongolia,5.83,77
+MU,Mauritius,5.83,78
+LY,Libya,5.82,79
+MD,Moldova,5.82,80
+GR,Greece,5.78,81
+VE,Venezuela,5.68,82
+ID,Indonesia,5.62,83
+DZ,Algeria,5.57,84
+BG,Bulgaria,5.55,85
+MK,North Macedonia,5.5,86
+HK,Hong Kong,5.49,88
+AM,Armenia,5.49,87
+TJ,Tajikistan,5.41,90
+AL,Albania,5.41,89
+GE,Georgia,5.4,91
+NP,Nepal,5.31,92
+LA,Laos,5.3,93
+TR,Turkey,5.26,94
+ZA,South Africa,5.21,95
+MZ,Mozambique,5.19,96
+GA,Gabon,5.12,97
+CI,Ivory Coast,5.1,98
+IR,Iran,5.09,99
+CG,Republic of the Congo,5.03,100
+IQ,Iraq,4.98,101
+GN,Guinea,4.93,102
+NA,Namibia,4.91,103
+NG,Nigeria,4.89,105
+CM,Cameroon,4.89,104
+AZ,Azerbaijan,4.88,106
+SN,Senegal,4.86,107
+PS,Palestine,4.78,108
+PK,Pakistan,4.77,109
+NE,Niger,4.73,110
+UA,Ukraine,4.68,111
+MA,Morocco,4.62,112
+MR,Mauritania,4.54,114
+KE,Kenya,4.51,115
+UG,Uganda,4.46,116
+GM,Gambia,4.42,117
+IN,India,4.39,118
+BF,Burkina Faso,4.38,120
+TD,Chad,4.38,119
+BJ,Benin,4.36,121
+ML,Mali,4.35,123
+SO,Somalia,4.35,122
+GH,Ghana,4.34,125
+KH,Cambodia,4.34,124
+MM,Myanmar,4.32,126
+TG,Togo,4.32,127
+JO,Jordan,4.31,128
+LR,Liberia,4.28,129
+MG,Madagascar,4.16,130
+ZM,Zambia,3.91,131
+ET,Ethiopia,3.9,132
+LK,Sri Lanka,3.89,133
+BD,Bangladesh,3.85,134
+EG,Egypt,3.82,135
+TZ,Tanzania,3.8,136
+SZ,Eswatini,3.77,137
+LS,Lesotho,3.76,138
+KM,Comoros,3.75,139
+YE,Yemen,3.56,140
+CD,DR Congo,3.47,141
+BW,Botswana,3.44,142
+ZW,Zimbabwe,3.4,143
+MW,Malawi,3.26,144
+LB,Lebanon,3.19,145
+SL,Sierra Leone,3,146
+AF,Afghanistan,1.36,147

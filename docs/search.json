@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "MidProject",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.1     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors"
   },
   {
     "objectID": "about.html",
@@ -12,5 +12,12 @@
     "title": "About",
     "section": "",
     "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "Code Page.html",
+    "href": "Code Page.html",
+    "title": "Code Page",
+    "section": "",
+    "text": "library(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.2.1     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nhappy2023=read.csv(\"happiness2023.csv\")\nhappy2024=read.csv(\"happiness2024.csv\")\nhappy2025=read.csv(\"happiness2025.csv\")\n\n\nHap25 = ggplot(head(happy2025,10), aes(x=country, y=WorldHappinessScore_2025, fill= country))+\n  geom_bar(stat=\"identity\")+\n  labs(x=\"Country Name\", y=\"Happiness Score\", title=\"Top 10 Happiest Countries in 2025\")+\n  coord_flip()+\n    theme(legend.position=\"none\")\n\n\nHap24 = ggplot(head(happy2024,10), aes(x=country, y=WorldHappinessScore_2024, fill= country))+\n  geom_bar(stat=\"identity\")+\n  labs(x=\"Country Name\", y=\"Happiness Score\", title=\"Top 10 Happiest Countries in 2024\")+\n  coord_flip()+\n    theme(legend.position=\"none\")\n\n\nHap23 = ggplot(head(happy2023,10), aes(x=country, y=WorldHappinessScore_2023, fill= country))+\n  geom_bar(stat=\"identity\")+\n  labs(x=\"Country Name\", y=\"Happiness Score\", title=\"Top 10 Happiest Countries in 2023\")+\n  coord_flip()+\n    theme(legend.position=\"none\")\n\n\nHappinessDiff2025 = happy2025 %&gt;%\n  inner_join(happy2024, by = \"country\") %&gt;%\n  mutate(Difference = WorldHappinessScore_2025 - WorldHappinessScore_2024)\nHappinessDiff2025= arrange(HappinessDiff2025, desc(Difference))\n\nHapDiff25 = ggplot(head(HappinessDiff2025,10), aes(x=country, y=Difference, fill= country))+\n  geom_bar(stat=\"identity\")+\n  labs(x=\"Country Name\", y=\"Increase in Happiness Score\", title=\"Top 10 Countries with a Change in Happiness between 2024 and 2025\")+\n  coord_flip()+\n    theme(legend.position=\"none\")"
   }
 ]
