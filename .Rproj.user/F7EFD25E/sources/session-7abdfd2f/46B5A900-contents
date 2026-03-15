@@ -2,54 +2,10 @@
 title: "MidProject"
 ---
 
-```{r}
-#| echo: false
-library(tidyverse)
-happy2023=read.csv("happiness2023.csv")
-happy2024=read.csv("happiness2024.csv")
-happy2025=read.csv("happiness2025.csv")
+# Overview
 
+This project is focused on redesigning the data from the World Happiness Report (2023-2025).
 
-Hap25 = ggplot(head(happy2025,10), aes(x=country, y=WorldHappinessScore_2025, fill= country))+
-  geom_bar(stat="identity")+
-  labs(x="Country Name", y="Happiness Score", title="Top 10 Happiest Countries in 2025")+
-  coord_flip()+
-    theme(legend.position="none")
- Hap25
+Although the data is presented with an interactive map, it can be improved to see countries that are improving on their happiness score over the years. The World Happiness Report utilizes the respective country's "gross domestic product per capita, social support, healthy life expectancy, freedom to make your own life choices, generosity of the general population, and perceptions of internal and external corruption levels" to compute scores which determine the happiness ranking. The score for one year is used by averaging the score from the previous 3 years. An example would be the 2025 happiness score would be the average from 2022-2024.
 
-```
-
-```{r}
-#| echo: false
-Hap24 = ggplot(head(happy2024,10), aes(x=country, y=WorldHappinessScore_2024, fill= country))+
-  geom_bar(stat="identity")+
-  labs(x="Country Name", y="Happiness Score", title="Top 10 Happiest Countries in 2024")+
-  coord_flip()+
-    theme(legend.position="none")
- Hap24
-```
-
-```{r}
-#| echo: false
-Hap23 = ggplot(head(happy2023,10), aes(x=country, y=WorldHappinessScore_2023, fill= country))+
-  geom_bar(stat="identity")+
-  labs(x="Country Name", y="Happiness Score", title="Top 10 Happiest Countries in 2023")+
-  coord_flip()+
-    theme(legend.position="none")
- Hap23
-```
-
-```{r}
-#| echo: false
-HappinessDiff2025 = happy2025 %>%
-  inner_join(happy2024, by = "country") %>%
-  mutate(Difference = WorldHappinessScore_2025 - WorldHappinessScore_2024)
-HappinessDiff2025= arrange(HappinessDiff2025, desc(Difference))
-
-HapDiff25 = ggplot(head(HappinessDiff2025,10), aes(x=country, y=Difference, fill= country))+
-  geom_bar(stat="identity")+
-  labs(x="Country Name", y="Increase in Happiness Score", title="Top 10 Countries with a Change in Happiness between 2024 and 2025")+
-  coord_flip()+
-    theme(legend.position="none")
- HapDiff25
-```
+![](originalmap.png){fig-align="center"}

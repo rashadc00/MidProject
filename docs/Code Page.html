@@ -135,6 +135,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link active" href="./Code Page.html" aria-current="page"> 
 <span class="menu-text">Code Page</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Redesign Page.html"> 
+<span class="menu-text">Redesign Page</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -212,16 +216,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>HappinessDiff2025 <span class="ot">=</span> happy2025 <span class="sc">%&gt;%</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">inner_join</span>(happy2024, <span class="at">by =</span> <span class="st">"country"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Difference =</span> WorldHappinessScore_2025 <span class="sc">-</span> WorldHappinessScore_2024)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">inner_join</span>(happy2023, <span class="at">by =</span> <span class="st">"country"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Difference =</span> WorldHappinessScore_2025 <span class="sc">-</span> WorldHappinessScore_2023)</span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>HappinessDiff2025<span class="ot">=</span> <span class="fu">arrange</span>(HappinessDiff2025, <span class="fu">desc</span>(Difference))</span>
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>HapDiff25 <span class="ot">=</span> <span class="fu">ggplot</span>(<span class="fu">head</span>(HappinessDiff2025,<span class="dv">10</span>), <span class="fu">aes</span>(<span class="at">x=</span>country, <span class="at">y=</span>Difference, <span class="at">fill=</span> country))<span class="sc">+</span></span>
 <span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">"identity"</span>)<span class="sc">+</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">"Country Name"</span>, <span class="at">y=</span><span class="st">"Increase in Happiness Score"</span>, <span class="at">title=</span><span class="st">"Top 10 Countries with a Change in Happiness between 2024 and 2025"</span>)<span class="sc">+</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">"Country Name"</span>, <span class="at">y=</span><span class="st">"Increase in Happiness Score"</span>, <span class="at">title=</span><span class="st">"Top 10 Countries with a Change in Happiness between 2023 and 2025"</span>)<span class="sc">+</span></span>
 <span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>()<span class="sc">+</span></span>
 <span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">"none"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+<pre class="{r}{r}"><code>#| echo: false
+world_tbl &lt;- map_data("world") %&gt;% as_tibble()
+world_tbl = world_tbl %&gt;% 
+  left_join(HappinessDiff2025, by = c("region"= "country"))
+#world_tbl =  world_tbl %&gt;% filter(!is.na(world_tbl$WorldHappinessScore_2025))
+
+world_base &lt;- world_tbl %&gt;%
+  ggplot(aes(long, lat,  map_id = region)) +
+  geom_map( aes(map_id= region), 
+            map= world_tbl)+
+  geom_polygon(aes(fill = Difference), color = "black")+
+  coord_map(xlim=c(-180,180))
+  
+world_base = world_base + 
+  scale_fill_gradient(name = "Change in Happiness Score", low = "yellow",
+                                   high =  "red", na.value = "grey50")
+world_base
+</code></pre>
 
 
 

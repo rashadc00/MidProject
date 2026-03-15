@@ -1,0 +1,17 @@
+{
+  "hash": "5180ce3a12b7bdf63a20605bd125f74c",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Redisgn Page\"\n---\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](Redesign-Page_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](Redesign-Page_files/figure-html/unnamed-chunk-2-1.png){width=672}\n:::\n:::\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](Redesign-Page_files/figure-html/unnamed-chunk-3-1.png){width=672}\n:::\n:::\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](Redesign-Page_files/figure-html/unnamed-chunk-4-1.png){width=672}\n:::\n:::\n\n\n\n::: {.cell}\n::: {.cell-output .cell-output-stderr}\n\n```\nWarning: Unknown or uninitialised column: `subgroup`.\n```\n\n\n:::\n\n::: {.cell-output-display}\n![](Redesign-Page_files/figure-html/unnamed-chunk-5-1.png){width=672}\n:::\n:::\n\n",
+    "supporting": [
+      "Redesign-Page_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -8,7 +8,10 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - Code Page.qmd
+      - href: Code Page.qmd
+        text: Code Page
+      - href: Redesign Page.qmd
+        text: Redesign Page
 
 format:
   html:
