@@ -12,6 +12,8 @@ website:
         text: Code Page
       - href: Redesign Page.qmd
         text: Redesign Page
+      - href: VideoPresent.qmd
+        text: Video Presentation
 
 format:
   html:
