@@ -95,3 +95,7 @@ world_base
 ```
 
 Although the above map has been distorted due to my code, I wanted to show a heat map of countries that have increase their level of happiness over the years. The darker green a country is, the larger increase in levels of happiness. I think it important to note that developing countries have a larger increase in their score, which could be due to growth in population or the increase in GDP.
+
+# Reference
+
+Happiest Countries in the World 2026. World Population Review. Retrieved March 15, 2026, from <https://worldpopulationreview.com/country-rankings/happiest-countries-in-the-world>

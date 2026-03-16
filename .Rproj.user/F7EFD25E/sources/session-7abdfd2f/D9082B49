@@ -3,7 +3,7 @@
     "path": "C:/Users/shado/OneDrive/Desktop/MidProject/Redesign Page.qmd",
     "project_path": "Redesign Page.qmd",
     "type": "quarto_markdown",
-    "hash": "0",
+    "hash": "2067901872",
     "contents": "",
     "dirty": false,
     "created": 1773534568745.0,
@@ -17,16 +17,16 @@
         "Source": "Source",
         "docOutlineVisible": "1",
         "rmdVisualCollapsedChunks": "",
-        "cursorPosition": "75,0",
+        "cursorPosition": "98,0",
         "scrollLine": "0",
-        "rmdVisualModeLocation": "56:229.3333282470703"
+        "rmdVisualModeLocation": "4273:3555.5556640625"
     },
     "folds": "",
-    "lastKnownWriteTime": 1773615090,
+    "lastKnownWriteTime": 1773622233,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1773615091018,
+    "last_content_update": 1773622233246,
     "read_only": false,
     "read_only_alternatives": []
 }
