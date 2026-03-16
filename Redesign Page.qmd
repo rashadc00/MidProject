@@ -50,7 +50,7 @@ Hap23 = ggplot(tail(arrange(happy2023,desc(WorldHappinessRank_2023)), 10), aes(x
 Hap23
 ```
 
-As we can see in the two graphs above, the same countries have been ranked in the top 10 based on their happiness score. One thing to note is that the countries have been increasing their own happiness score through out the years. This can be for several reasons, including increase in GDP or life expectancy. However, as seen with other countries outside of the top 10, it is important to take into consideration the impact of developing health and technological sciences as well. An example of this would be Mexico. Mexico's happiness rank in 2023 was 36th, and as of 2025 is now ranked 10th in the world.
+As we can see in the two graphs above, the same countries have been ranked in the top 10 based on their happiness score. One thing to note is that the countries have been increasing their own happiness score through out the years. This can be for several reasons, including increase in GDP or life expectancy. However, as seen with other countries outside of the top 10, it is important to take into consideration the impact of developing health and technological sciences as well. An example of this would be Mexico. Mexico's happiness rank in 2023 was 36th, and as of 2025 is now ranked 10th in the world. If we wanted to see the bottom 10 or least happiest countries we would easily be able to within the code.
 
 ```{r}
 #| echo: false
@@ -71,7 +71,7 @@ HapDiff25 = ggplot(head(HappinessDiff2025,10), aes(x=country, y=Difference, fill
 HapDiff25
 ```
 
-What I wanted to see with this data was what countries have been working on increasing their overall happiness, even if they were not highly ranked. In the graph above we can see countries, like Tunisia, ranked 110th in 2023 and 70th in 2025, increase their overall happiness by over one point. Although it is easy to see which countries are doing well and ranked very happy, I believe it is important to note countries that are also improving their standards of living as well.
+What I wanted to see with this data was what countries have been working on increasing their overall happiness, even if they were not highly ranked. In the graph above we can see countries, like Tunisia, ranked 110th in 2023 and 70th in 2025, increase their overall happiness by over one point. Although it is easy to see which countries are doing well and ranked very happy, I believe it is important to note countries that are also improving their standards of living as well. If we wanted to see the countries with the least increase or the most decrease, we would easily be able to see that with a change in the code as well.
 
 ```{r}
 #| echo: false
