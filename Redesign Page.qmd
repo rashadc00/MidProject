@@ -2,17 +2,20 @@
 title: "Redisgn Page"
 ---
 
+# Redesign and Analysis
+
 ```{r}
 #| echo: false
 #| message: false
 #| warning: false
 #| paged-print: false
+
 library(tidyverse) 
 happy2023=read.csv("happiness2023.csv")
 happy2024=read.csv("happiness2024.csv") 
 happy2025=read.csv("happiness2025.csv") 
 
-Hap25 = ggplot(head(happy2025,10),aes(x=country, y=WorldHappinessScore_2025, fill = country))+
+Hap25 = ggplot(tail(arrange(happy2025,desc(WorldHappinessRank_2025)),10),aes(x=country, y=WorldHappinessScore_2025, fill = country))+
   geom_bar(stat="identity")+
   labs(x="Country Name",
        y="Happiness Score",
@@ -23,8 +26,9 @@ Hap25
 ```
 
 ```{r}
-#| echo: false
-Hap24 = ggplot(head(happy2024,10), aes(x=country, y=WorldHappinessScore_2024, fill= country))+
+#| eval: false
+#| include: false
+Hap24 = ggplot(tail(arrange(happy2024,desc(WorldHappinessRank_2024)),10), aes(x=country, y=WorldHappinessScore_2024, fill= country))+
   geom_bar(stat="identity")+
   labs(x="Country Name",
        y="Happiness Score",
@@ -36,7 +40,7 @@ Hap24
 
 ```{r}
 #| echo: false
-Hap23 = ggplot(head(happy2023,10), aes(x=country, y=WorldHappinessScore_2023, fill= country))+
+Hap23 = ggplot(tail(arrange(happy2023,desc(WorldHappinessRank_2023)), 10), aes(x=country, y=WorldHappinessScore_2023, fill= country))+
   geom_bar(stat="identity")+
   labs(x="Country Name",
        y="Happiness Score",
@@ -45,6 +49,8 @@ Hap23 = ggplot(head(happy2023,10), aes(x=country, y=WorldHappinessScore_2023, fi
   theme(legend.position="none")  
 Hap23
 ```
+
+As we can see in the two graphs above, the same countries have been ranked in the top 10 based on their happiness score. One thing to note is that the countries have been increasing their own happiness score through out the years. This can be for several reasons, including increase in GDP or life expectancy. However, as seen with other countries outside of the top 10, it is important to take into consideration the impact of developing health and technological sciences as well. An example of this would be Mexico. Mexico's happiness rank in 2023 was 36th, and as of 2025 is now ranked 10th in the world.
 
 ```{r}
 #| echo: false
@@ -65,8 +71,11 @@ HapDiff25 = ggplot(head(HappinessDiff2025,10), aes(x=country, y=Difference, fill
 HapDiff25
 ```
 
+What I wanted to see with this data was what countries have been working on increasing their overall happiness, even if they were not highly ranked. In the graph above we can see countries, like Tunisia, ranked 110th in 2023 and 70th in 2025, increase their overall happiness by over one point. Although it is easy to see which countries are doing well and ranked very happy, I believe it is important to note countries that are also improving their standards of living as well.
+
 ```{r}
 #| echo: false
+#| message: false
 #| warning: false
 world_tbl <- map_data("world") %>% as_tibble()
 world_tbl = world_tbl %>%
@@ -81,6 +90,8 @@ world_base <- world_tbl %>%
   coord_map(xlim=c(-180,180))
 
 world_base = world_base +
-  scale_fill_gradient(name = "Change in Happiness Score", low = "yellow",                                    high =  "red", na.value = "grey50")
+  scale_fill_gradient(name = "Change in Happiness Score", low = "yellow",                                    high =  "darkgreen", na.value = "grey50")
 world_base
 ```
+
+Although the above map has been distorted due to my code, I wanted to show a heat map of countries that have increase their level of happiness over the years. The darker green a country is, the larger increase in levels of happiness. I think it important to note that developing countries have a larger increase in their score, which could be due to growth in population or the increase in GDP.
